@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - عطور الأناقة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-secondary">
+    <form class="bg-white p-5 rounded shadow" style="width: 380px;" onsubmit="return validateLogin()">
+        <h3 class="mb-4 text-center">تسجيل الدخول</h3>
+        
+        <div class="mb-3">
+            <label class="form-label">البريد الإلكتروني</label>
+            <input type="email" id="userEmail" class="form-control" required placeholder="name@example.com">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">كلمة المرور</label>
+            <input type="password" id="userPass" class="form-control" minlength="6" required placeholder="6 أحرف على الأقل">
+        </div>
+        
+        <button type="submit" class="btn btn-warning w-100 fw-bold">دخول</button>
+        
+        <div class="text-center mt-3">
+            <a href="register.html" class="text-decoration-none text-dark me-3">إنشاء حساب جديد</a>
+            <a href="index.html" class="text-decoration-none text-secondary">العودة للرئيسية</a>
+        </div>
+    </form>
+
+    <script>
+        function validateLogin() {
+            let email = document.getElementById('userEmail').value;
+            if(email === "") {
+                alert("يرجى كتابة البريد الإلكتروني.");
+                return false;
+            }
+            alert("تم تسجيل الدخول بنجاح!");
+            return true;
+        }
+    </script>
+</body>
+</html>
