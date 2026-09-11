@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد - عطور الأناقة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-secondary">
+    
+    <form class="bg-white p-5 rounded shadow" style="width: 400px;" onsubmit="return validateRegister()">
+        <h3 class="mb-4 text-center">إنشاء حساب جديد</h3>
+        
+        <div class="mb-3">
+            <label class="form-label">الاسم الكامل</label>
+            <input type="text" id="userName" class="form-control" required placeholder="أدخل اسمك الثلاثي">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">البريد الإلكتروني</label>
+            <input type="email" id="userEmail" class="form-control" required placeholder="name@example.com">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">كلمة المرور</label>
+            <input type="password" id="userPass1" class="form-control" minlength="6" required placeholder="6 أحرف على الأقل">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">تأكيد كلمة المرور</label>
+            <input type="password" id="userPass2" class="form-control" minlength="6" required placeholder="أعد كتابة كلمة المرور">
+        </div>
+        
+        <button type="submit" class="btn btn-warning w-100 fw-bold">تسجيل حساب جديد</button>
+        
+        <div class="text-center mt-3">
+            <a href="login.html" class="text-decoration-none text-dark me-3">لدي حساب بالفعل</a>
+            <a href="index.html" class="text-decoration-none text-secondary">العودة للرئيسية</a>
+        </div>
+    </form>
+
+    <script>
+        function validateRegister() {
+            let pass1 = document.getElementById('userPass1').value;
+            let pass2 = document.getElementById('userPass2').value;
+
+            if(pass1 !== pass2) {
+                alert("كلمتي المرور غير متطابقتين، يرجى المحاولة مرة أخرى.");
+                return false;
+            }
+
+            alert("تم إنشاء الحساب بنجاح! سيتم تحويلك الآن.");
+            return true; 
+        }
+    </script>
+</body>
+</html>
