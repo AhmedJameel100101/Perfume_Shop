@@ -1,0 +1,92 @@
+:root {
+    --gold: #d4af37;
+    --dark-gold: #aa820a;
+    --black-bg: #111111;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: #fcfbf7 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222222;
+}
+
+.bg-dark {
+    background-color: var(--black-bg) !important;
+    border-bottom: 2px solid var(--gold);
+}
+
+.text-warning {
+    color: var(--gold) !important;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+}
+
+.main-content {
+    flex: 3;
+    border-top: 3px solid var(--gold);
+}
+
+.side-content {
+    flex: 1;
+    background: linear-gradient(135deg, #111111, #2a2a2a) !important;
+    color: var(--gold) !important;
+    border: 1px solid var(--gold);
+}
+
+.btn-warning {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: var(--dark-gold) !important;
+}
+
+.btn-dark {
+    background-color: var(--black-bg) !important;
+    border-color: var(--gold) !important;
+    color: var(--gold) !important;
+}
+
+.btn-dark:hover {
+    background-color: var(--gold) !important;
+    color: #ffffff !important;
+}
+
+.card {
+    border: 1px solid #e8e2d5 !important;
+    background-color: var(--card-bg);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--gold) !important;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2) !important;
+}
+
+.stars-rating {
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+.fa-heart.active {
+    color: #dc3545 !important;
+    font-weight: 900;
+}
