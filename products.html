@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا - عطور الأناقة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-img {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark bg-dark p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-warning" href="index.html">
+                    <h1 class="m-0 fs-3">عطور الأناقة</h1>
+                </a>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="text-warning fs-4 me-3 position-relative" data-bs-toggle="modal" data-bs-target="#cartModal" onclick="renderCartModal()">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6">0</span>
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="sideMenu">
+                    <div class="offcanvas-header border-bottom border-secondary">
+                        <h5 class="offcanvas-title text-warning">القائمة الرئيسية</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="navbar-nav pe-3">
+                            <a href="index.html" class="nav-link text-white fs-5 mb-2">الرئيسية</a>
+                            <a href="products.html" class="nav-link text-white fs-5 mb-2">المجموعة الفاخرة</a>
+                            <a href="about.html" class="nav-link text-white fs-5 mb-2">من نحن</a>
+                            <a href="contact.html" class="nav-link text-white fs-5 mb-2">تواصل معنا</a>
+                            <a href="login.html" class="nav-link text-warning fs-5 mb-2">تسجيل الدخول</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg-dark text-warning text-center p-4 mb-3">
+        <h2>تشكيلة العطور الفاخرة</h2>
+        <p class="text-white mb-0">ابتكار خارج عن المألوف ولمسة فنية راقية</p>
+    </div>
+
+    <div class="container mb-3">
+        <input type="text" class="form-control text-center shadow-sm" placeholder="🔍 ابحث عن عطرك المفضل...">
+    </div>
+
+    <div class="text-center my-3">
+        <button class="btn btn-warning btn-sm active">الكل</button>
+        <button class="btn btn-outline-dark btn-sm">عطور رجالية</button>
+        <button class="btn btn-outline-dark btn-sm">عطور نسائية</button>
+        <button class="btn btn-outline-dark btn-sm">بخور وعود</button>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 g-3">
+            
+            <!-- العطر الأول: رجالي -->
+            <div class="col">
+                <div class="card h-100 text-center p-2 shadow-sm position-relative">
+                    <span class="badge bg-dark position-absolute top-0 start-0 m-2">رجالي</span>
+                    <i class="fa-regular fa-heart position-absolute top-0 end-0 m-2 text-muted"></i>
+                    <div class="p-1 bg-light rounded text-center">
+                        <img src="images/perfume1.jpg" class="card-img-top rounded product-img" alt="عطر أراك">
+                    </div>
+                    <div class="card-body p-2">
+                        <small class="text-muted d-block">ARAK</small>
+                        <h6 class="card-title fw-bold text-truncate">عطر أراك الملكي</h6>
+                        <div class="stars-rating my-1 text-warning">
+                            <span class="text-dark small me-1">(5.0)</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-danger fw-bold me-1">320 ريال</span>
+                            <small class="text-muted text-decoration-line-through">400</small>
+                        </div>
+                        <button class="btn btn-sm btn-dark w-100 mt-2">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العطر الثاني: نسائي -->
+            <div class="col">
+                <div class="card h-100 text-center p-2 shadow-sm position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">نسائي</span>
+                    <i class="fa-regular fa-heart position-absolute top-0 end-0 m-2 text-muted"></i>
+                    <div class="p-1 bg-light rounded text-center">
+                        <img src="images/perfume2.jpg" class="card-img-top rounded product-img" alt="عطر عسل">
+                    </div>
+                    <div class="card-body p-2">
+                        <small class="text-muted d-block">OZAREEEJ</small>
+                        <h6 class="card-title fw-bold text-truncate">عطر عسل الخاص</h6>
+                        <div class="stars-rating my-1 text-warning">
+                            <span class="text-dark small me-1">(4.8)</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-danger fw-bold me-1">270 ريال</span>
+                            <small class="text-muted text-decoration-line-through">350</small>
+                        </div>
+                        <button class="btn btn-sm btn-dark w-100 mt-2">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العطر الثالث: نسائي -->
+            <div class="col">
+                <div class="card h-100 text-center p-2 shadow-sm position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">نسائي</span>
+                    <i class="fa-regular fa-heart position-absolute top-0 end-0 m-2 text-muted"></i>
+                    <div class="p-1 bg-light rounded text-center">
+                        <img src="images/perfume3.jpg" class="card-img-top rounded product-img" alt="عطر كحيلان">
+                    </div>
+                    <div class="card-body p-2">
+                        <small class="text-muted d-block">DKHONI</small>
+                        <h6 class="card-title fw-bold text-truncate">عطر كحيلان الشرقي</h6>
+                        <div class="stars-rating my-1 text-warning">
+                            <span class="text-dark small me-1">(4.9)</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-danger fw-bold me-1">290 ريال</span>
+                            <small class="text-muted text-decoration-line-through">380</small>
+                        </div>
+                        <button class="btn btn-sm btn-dark w-100 mt-2">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العطر الرابع: فاخر -->
+            <div class="col">
+                <div class="card h-100 text-center p-2 shadow-sm position-relative">
+                    <span class="badge bg-dark position-absolute top-0 start-0 m-2">رجالي</span>
+                    <i class="fa-regular fa-heart position-absolute top-0 end-0 m-2 text-muted"></i>
+                    <div class="p-1 bg-light rounded text-center">
+                        <img src="images/perfume4.jpg" class="card-img-top rounded product-img" alt="عطر التبغ اليوناني">
+                    </div>
+                    <div class="card-body p-2">
+                        <small class="text-muted d-block">IBRAHIM</small>
+                        <h6 class="card-title fw-bold text-truncate">عطر التبغ اليوناني</h6>
+                        <div class="stars-rating my-1 text-warning">
+                            <span class="text-dark small me-1">(5.0)</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-danger fw-bold me-1">350 ريال</span>
+                            <small class="text-muted text-decoration-line-through">420</small>
+                        </div>
+                        <button class="btn btn-sm btn-dark w-100 mt-2">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج الخامس: بخور وعود -->
+            <div class="col">
+                <div class="card h-100 text-center p-2 shadow-sm position-relative">
+                    <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">بخور وعود</span>
+                    <i class="fa-regular fa-heart position-absolute top-0 end-0 m-2 text-muted"></i>
+                    <div class="p-1 bg-light rounded text-center">
+                        <img src="images/perfume5.jpg" class="card-img-top rounded product-img" alt="بخور فاخر ومبخرة">
+                    </div>
+                    <div class="card-body p-2">
+                        <small class="text-muted d-block">BAKHOOR</small>
+                        <h6 class="card-title fw-bold text-truncate">بخور ودخون الملكي</h6>
+                        <div class="stars-rating my-1 text-warning">
+                            <span class="text-dark small me-1">(5.0)</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-danger fw-bold me-1">290 ريال</span>
+                            <small class="text-muted text-decoration-line-through">380</small>
+                        </div>
+                        <button class="btn btn-sm btn-dark w-100 mt-2">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center my-4">
+            <a href="index.html" class="btn btn-warning">العودة للرئيسية</a>
+        </div>
+    </div>
+
+    <!-- نافذة سلة المشتريات المنبثقة -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-warning">
+                    <h5 class="modal-title fw-bold">سلة التسوق</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="cart-modal-body">
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="fw-bold fs-5 text-dark">المجموع الإجمالي: <span id="cart-total" class="text-danger">0</span> ريال</div>
+                    <div>
+                        <button type="button" class="btn btn-outline-danger btn-sm me-2" onclick="clearCart()">تفريغ السلة</button>
+                        <button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
